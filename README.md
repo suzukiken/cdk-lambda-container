@@ -1,14 +1,15 @@
-# Welcome to your CDK TypeScript project!
+# CDK project
 
-This is a blank project for TypeScript development with CDK.
+* ECR Repository
+* Lambda Function
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+## commands
 
-## Useful commands
+ * `cdk deploy CdkLambdaContainerRepoStack`   create ECR repo
+ * `cdk deploy CdkLambdaContainerStack`    create Lambda Function
 
- * `npm run build`   compile typescript to js
- * `npm run watch`   watch for changes and compile
- * `npm run test`    perform the jest unit tests
- * `cdk deploy`      deploy this stack to your default AWS account/region
- * `cdk diff`        compare deployed stack with current state
- * `cdk synth`       emits the synthesized CloudFormation template
+## note
+
+https://docs.aws.amazon.com/lambda/latest/dg/images-create.html
+
+> The container image must be able to run on a read-only file system. Your function code can access a writable /tmp directory with 512 MB of storage.
